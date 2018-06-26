@@ -1,48 +1,32 @@
 <view class='container'>
-        <swiper indicator-dots="true" autoplay="true" interval="2000">
-          <swiper-item>
-            <image src='../../images/wx.png'></image>
-          </swiper-item>
-          <swiper-item>
-            <image src='../../images/vr.png'></image>
-          </swiper-item>
-          <swiper-item>
-            <image src='../../images/iqiyi.png'></image>
-          </swiper-item>
-        </swiper>
+    <swiper indicator-dots="true" autoplay="true" interval="2000">
+      <swiper-item>
+        <image src='../../images/wx.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../images/vr.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../images/iqiyi.png'></image>
+      </swiper-item>
+    </swiper>
+  <block wx:for="{{contentKeys}}" wx:key="{{}}">
     <view class='content-container'>
       <view class='content-author-date'>
-        <image class='content-author' src='../../images/avatar/1.png'></image>
-        <text class='content-date'>Jun 26 2018</text>
+        <image class='content-author' src='{{item.avatar}}'></image>
+        <text class='content-date'>{{item.date}}</text>
       </view>
-        <text class='content-title'>正是虾肥蟹壮时</text>
-        <image class='content-image' src='../../images/post/crab.png'></image>
-        <text class='content-content'>菊黄蟹正肥，品尝秋之味。徐志摩把,“看初花的荻芦”和“到楼外楼吃蟹”,并列为秋天来杭州不能错过的风雅之事；用林妹妹的话讲是“螯封嫩玉双双满。</text>
+        <text class='content-title'>{{item.title}}</text>
+        <image class='content-image' src='{{item.imgSrc}}'></image>
+        <text class='content-content'>{{item.content}}</text>
       <view class='content-footer'>
         <image class='footer-image' src='../../images/icon/chat1.png'>
         </image>
-        <text class="footer-font">92</text>
+        <text class="footer-font">{{item.reading}}</text>
          <image class='footer-image' src='../../images/icon/view.png'>
         </image>
-        <text class="footer-font">62</text>
+        <text class="footer-font">{{item.collection}}</text>
       </view>
     </view>
-
-    <view class='content-container'>
-      <view class='content-author-date'>
-        <image class='content-author' src='../../images/avatar/2.png'></image>
-        <text class='content-date'>Jun 27 2018</text>
-      </view>
-        <text class='content-title'>比利·林恩的中场故事</text>
-        <image class='content-image' src='../../images/post/bl.png'></image>
-        <text class='content-content'>一 “李安是一位绝不会重复自己的导演，本片将极富原创性李安众所瞩目的新片《比利林恩漫长的中场休息》，正式更名《半场无战事》。</text>
-      <view class='content-footer'>
-        <image class='footer-image' src='../../images/icon/chat1.png'>
-        </image>
-        <text class="footer-font">92</text>
-         <image class='footer-image' src='../../images/icon/view.png'>
-        </image>
-        <text class="footer-font">62</text>
-      </view>
-    </view>
+  </block>
 </view>

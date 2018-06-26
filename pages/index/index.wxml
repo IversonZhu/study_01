@@ -3,7 +3,7 @@
   <view>
     <text class='nickname-text'>Hello，Iverson</text>
   </view>
-  <view class='btn-container'>
+  <view class='btn-container'  bindtap='onTab'>
     <text class='btn-text'>开启微信小程序之旅</text>
   </view>
 </view>
