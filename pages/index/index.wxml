@@ -1,0 +1,9 @@
+<view class='container'>
+  <image class='logo-image' src='/images/avatar/4.png'></image>
+  <view>
+    <text class='nickname-text'>Hello，Iverson</text>
+  </view>
+  <view class='btn-container'>
+    <text class='btn-text'>开启微信小程序之旅</text>
+  </view>
+</view>
