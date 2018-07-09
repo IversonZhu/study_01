@@ -1,32 +1,17 @@
+<import src="post-item/post-item-template.wxml"/>
 <view class='container'>
-    <swiper indicator-dots="true" autoplay="true" interval="2000">
-      <swiper-item>
-        <image src='../../images/wx.png'></image>
-      </swiper-item>
-      <swiper-item>
-        <image src='../../images/vr.png'></image>
-      </swiper-item>
-      <swiper-item>
-        <image src='../../images/iqiyi.png'></image>
-      </swiper-item>
-    </swiper>
+  <swiper indicator-dots="true" autoplay="true" interval="2000">
+    <swiper-item>
+      <image src='../../images/wx.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/vr.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/iqiyi.png'></image>
+    </swiper-item>
+  </swiper>
   <block wx:for="{{contentKeys}}" wx:key="{{}}">
-    <view class='content-container'>
-      <view class='content-author-date'>
-        <image class='content-author' src='{{item.avatar}}'></image>
-        <text class='content-date'>{{item.date}}</text>
-      </view>
-        <text class='content-title'>{{item.title}}</text>
-        <image class='content-image' src='{{item.imgSrc}}'></image>
-        <text class='content-content'>{{item.content}}</text>
-      <view class='content-footer'>
-        <image class='footer-image' src='../../images/icon/chat1.png'>
-        </image>
-        <text class="footer-font">{{item.reading}}</text>
-         <image class='footer-image' src='../../images/icon/view.png'>
-        </image>
-        <text class="footer-font">{{item.collection}}</text>
-      </view>
-    </view>
+    <template is="postItem" data="{{item}}"/>
   </block>
 </view>
